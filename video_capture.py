@@ -2,6 +2,14 @@
 file: video_capture.py
 author: Archie Noel C. Lleva
 description: initiates object tracking of blue objects using the HSV color model
+References: 
+video capture and object masking
+https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+
+contour box tutorial
+https://www.youtube.com/watch?v=O3b8lVF93jU
+
+note: used youtube tutorial to apply contour box around the masked colored object
 """
 
 import cv2 as cv
