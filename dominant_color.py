@@ -1,3 +1,19 @@
+"""
+file: dominant_color.py
+author: Archie Noel C. Lleva
+description: initiates object tracking of blue objects using the HSV color model
+References: 
+video capture
+https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+
+dominant color bar
+https://github.com/aysebilgegunduz/DominantColor/blob/master/dominant_color.py
+
+
+
+note: used youtube tutorial to apply contour box around the masked colored object
+"""
+
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,33 +33,7 @@ def find_histogram(clt):
     hist /= hist.sum()
 
     return hist
-"""
-def plot_colors(hist, cent):
-    start = 0
-    end = 0
-    myRect = np.zeros((50, 300, 3), dtype="uint8")
-    tmp = hist[0]
-    tmpC = cent[0]
-    for (percent, color) in zip(hist, cent):
-        if(percent > tmp):
-            tmp = percent
-            tmpC = color
-    end = start + (tmp * 300) # try to fit my rectangle 50*300 shape
-    cv2.rectangle(myRect, (int(start), 0), (int(end), 50),
-                  tmpC.astype("uint8").tolist(), -1)
-    start = end
-    #rest will be black. Convert to black
-    for (percent,color) in zip(hist, cent):
-        end = start + (percent * 300)  # try to fit my rectangle 50*300 shape
-        if(percent != tmp):
-            color = [0, 0, 0]
-            cv2.rectangle(myRect, (int(start), 0), (int(end), 50),
-                      color, -1) #draw in a rectangle
-            start = end
 
-    return myRect
-
-"""
 def plot_colors2(hist, centroids):
     bar = np.zeros((50, 300, 3), dtype="uint8")
     startX = 0
@@ -57,6 +47,7 @@ def plot_colors2(hist, centroids):
 
     # return the bar chart
     return bar
+
 cap = cv.VideoCapture(0)
 while(1):
     _, frame = cap.read()
