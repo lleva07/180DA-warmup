@@ -46,9 +46,9 @@ while(1):
 cv.destroyAllWindows()
 
 
-#HSV vs RGB: HSV values are generally better, since they take into account the change in light conditions around an object
+#1.)HSV vs RGB: HSV values are generally better, since they take into account the change in light conditions around an object.
 
-#lights on or off: able to retain tracking capabilities despite low light conditions
+#2.)lights on or off: able to retain tracking capabilities despite low light conditions, non major differences for low and bright lighting.
 
-#does turning off light hurt color detection: to some extent yes: at low brightness, model was able to fully detect block, however at high brightness model was
+#3.)does turning off light hurt color detection: to some extent yes: at low brightness, model was able to fully detect block, however at high brightness model was
 #unable to detect color as evidenced by the masking
