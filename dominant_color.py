@@ -79,3 +79,5 @@ while(1):
         break
 
 cv.destroyAllWindows()
+
+#results: lighted non-phone object is more robust as compared to phone screen color with varying brightness
