@@ -61,7 +61,7 @@ while(1):
     frm = cv.cvtColor(roi, cv.COLOR_BGR2HSV)
 
     frm = frm.reshape((frm.shape[0] * frm.shape[1],3)) #represent as row*column,channel number
-    clt = KMeans(n_clusters=2) #cluster number
+    clt = KMeans(n_clusters=3) #cluster number
     clt.fit(frm)
 
     hist = find_histogram(clt)
