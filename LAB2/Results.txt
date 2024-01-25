@@ -1,0 +1,25 @@
+PART I
+1. Based on your experiences, what is made possible using MQTT? wide memo announcements, sensor data logging
+2. What seems fairly difficult using MQTT? executing high frequency trades in the stock market
+3. If you were to use MQTT, what would be a reasonable communications lag time be? ideally, in the millisecond range for sensor data logging
+4. Would you prefer to use a different method of transmitting data? MQTT works fine for my use case, use of WebSockets may be more ideal for web application integration
+
+PART II
+1. Try more similar sounding words, particularly bad examples may be words like “sound” and “found”, letters (A, B, C, D, E, F, G). 
+Does the performance start taking a hit? yes
+2. Phrases. How long of a phrase can work? no limit
+3. Is the length of a phrase actually a good thing for “error correction”? longer phrase, leads to better recognition
+4. Play music in the background. Go to a coffee shop (or work in the lab). How well does it work in noise? still registers specific words
+6. What are ways to improve its performance in noise? use a bandpass filter from a library
+
+Project Application:
+
+(a) What can you do with your given speech program in the project? 
+* voice activation of powerups
+(b) How complex do you want your speech recognition to be? How complex can you reasonably expect your speech recognition to be?
+* pretty simple, only need to use specific phrases for voice activation features
+(c) What level of speech accuracy do you need? In other words, how quickly do you need an accurate recognition? Does a missed recognition hurt the progress of the game?
+* needs low latency speech recognition, because relatively fast paced nature of game
+(d) Do you need specific hardware, specific conditions, etc. to have a reasonable confidence that it works well enough?
+* use of better microphone for better voice recognition
+* implementation of bandpass filter in code, to reduce inaccuracy
