@@ -2,6 +2,9 @@ import paho.mqtt.client as mqtt
 import random
 
 end_condition = False
+player1_wait = 0
+player2_wait = 0
+
 class RockPaperScissorsGame:
     def __init__(self):
         self.user_choices = {'r': 'rock', 'p': 'paper', 's': 'scissors'}

@@ -11,6 +11,7 @@ def on_disconnect(client, userdata, rc):
 
 def on_message(client, userdata, message):
     result = str(message.payload, 'utf-8')
+    
     print(f"Result received: {result}")
 
 client = mqtt.Client()
