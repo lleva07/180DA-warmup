@@ -21,7 +21,7 @@ client.on_message = on_message
 client.connect_async('mqtt.eclipseprojects.io')
 client.loop_start()
 
-player_name = "player1"
+player_name = "player2"
 topic = f"rps/{player_name}"
 
 while True:
